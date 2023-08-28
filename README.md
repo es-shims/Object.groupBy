@@ -59,6 +59,21 @@ assert.equal(shimmed, Object.groupBy);
 assert.deepEqual(Object.groupBy(arr, parity), groupBy(arr, parity));
 ```
 
+### TypeScript
+
+```typescript
+// import the module as usual:
+import groupBy from 'object.groupby';
+
+// if polyfilling, you can also patch the global object:
+declare global {
+  interface ObjectConstructor {
+    groupBy: typeof groupBy;
+  }
+}
+
+```
+
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
 
