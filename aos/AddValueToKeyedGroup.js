@@ -6,7 +6,7 @@ var SameValue = require('es-abstract/2023/SameValue');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
-var $filter = callBound('Array.prototype.filter');
+var $filter = require('array.prototype.filter');
 var $push = callBound('Array.prototype.push');
 
 module.exports = function AddValueToKeyedGroup(groups, key, value) {
