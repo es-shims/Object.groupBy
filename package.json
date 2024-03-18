@@ -63,11 +63,9 @@
 		"tape": "^5.7.5"
 	},
 	"dependencies": {
-		"array.prototype.filter": "^1.0.3",
-		"call-bind": "^1.0.5",
+		"call-bind": "^1.0.7",
 		"define-properties": "^1.2.1",
-		"es-abstract": "^1.22.3",
-		"es-errors": "^1.0.0"
+		"es-abstract": "^1.23.2"
 	},
 	"auto-changelog": {
 		"output": "CHANGELOG.md",
