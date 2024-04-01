@@ -57,6 +57,24 @@ module.exports = function (groupBy, t) {
 			'thisArg and callback arguments are as expected'
 		);
 
+		st.test('strings', function (s2t) {
+			var obj = groupBy('abcd💩', function (char) {
+				return char < 'c' ? 'before' : 'after';
+			});
+
+			s2t.deepEqual(
+				obj,
+				{
+					__proto__: null,
+					before: ['a', 'b'],
+					after: ['c', 'd', '💩']
+				},
+				'grouping a string works as expected'
+			);
+
+			s2t.end();
+		});
+
 		st.end();
 	});
 };
