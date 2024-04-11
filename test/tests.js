@@ -72,6 +72,13 @@ module.exports = function (groupBy, t) {
 				'grouping a string works as expected'
 			);
 
+			var string = '🥰💩🙏😈';
+			var obj2 = groupBy(string, function (char) {
+				return char < '🙏' ? 'before' : 'after';
+			});
+
+			s2t.deepEqual(obj2, { __proto__: null, after: ['🥰', '🙏'], before: ['💩', '😈'] });
+
 			s2t.end();
 		});
 
