@@ -5,7 +5,7 @@ var OrdinaryObjectCreate = require('es-abstract/2024/OrdinaryObjectCreate');
 
 var forEach = require('es-abstract/helpers/forEach');
 
-var GroupBy = require('es-abstract/2024/GroupBy'); // TODO: replace with es-abstract 2024 implementation
+var GroupBy = require('es-abstract/2024/GroupBy');
 
 module.exports = function groupBy(items, callbackfn) {
 	var groups = GroupBy(items, callbackfn, 'PROPERTY'); // step 1
